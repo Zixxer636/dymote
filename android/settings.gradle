@@ -1,0 +1,2 @@
+include ':app', ':dymote'
+project(':dymote').projectDir = new File('/home/erik/go/src/dymote/android/dymote')

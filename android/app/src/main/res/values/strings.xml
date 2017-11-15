@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dynaudio</string>
+    <string name="app_name_full">Dynaudio Remote</string>
+    <string-array name="inputoptions_array">
+        <item>Line</item>
+        <item>Optical</item>
+        <item>Coax</item>
+        <item>USB</item>
+    </string-array>
+</resources>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.erik.dymote.RemoteActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:weightSum="1">
+
+        <ToggleButton
+            android:id="@+id/btnMute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mute"
+            android:textOff="Mute"
+            android:textOn="Mute"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ToggleButton
+            android:id="@+id/btnPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="togglePower"
+            android:textOff="Off"
+            android:textOn="On"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:weightSum="1"
+        android:id="@+id/volumeLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp">
+
+        <ImageButton
+            android:id="@+id/btnVolDown"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.25"
+            android:enabled="false"
+            android:onClick="volumeDown"
+            android:src="@drawable/ic_volume_down_black_24dp" />
+
+        <SeekBar
+            android:id="@+id/volumeBar"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:clickable="false"
+            android:max="14" />
+
+        <ImageButton
+            android:id="@+id/btnVolUp"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.25"
+            android:enabled="false"
+            android:onClick="volumeUp"
+            android:src="@drawable/ic_volume_up_black_24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/volumeLayout"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <ToggleButton
+            android:id="@+id/btnSource2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:drawableTop="@drawable/ic_input_black_24dp"
+            android:onClick="changeSource"
+            android:padding="20dp"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:tag="2"
+            android:text="ToggleButton"
+            android:textOff="Line"
+            android:textOn="Line"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="296dp" />
+
+        <ToggleButton
+            android:id="@+id/btnSource3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:drawableTop="@drawable/ic_input_black_24dp"
+            android:onClick="changeSource"
+            android:padding="20dp"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:tag="3"
+            android:text="ToggleButton"
+            android:textOff="Optical"
+            android:textOn="Optical"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="296dp" />
+
+        <ToggleButton
+            android:id="@+id/btnSource4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:drawableTop="@drawable/ic_input_black_24dp"
+            android:onClick="changeSource"
+            android:padding="20dp"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:tag="4"
+            android:text="ToggleButton"
+            android:textOff="Coax"
+            android:textOn="Coax"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="296dp" />
+
+        <ToggleButton
+            android:id="@+id/btnSource5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:drawableTop="@drawable/ic_input_black_24dp"
+            android:onClick="changeSource"
+            android:padding="20dp"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:tag="5"
+            android:text="ToggleButton"
+            android:textOff="USB"
+            android:textOn="USB"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="296dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linlaHeaderProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground"
+        android:gravity="center_vertical|center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/pbHeaderProgress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"></ProgressBar>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
